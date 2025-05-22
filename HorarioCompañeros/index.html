@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario de Clases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding-top: 5%;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;            
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .day {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        .day:nth-child(even) {
+            background-color: #007bff;
+        }
+        .day:nth-child(odd) {
+            background-color: #28a745;
+        }
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: block;
+        }
+        a:hover {
+            background-color: #555;
+        }
+        .email{
+            color:#007bff;
+        }
+        .btn{
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+          }        
+          .btn:active {
+            background-color: #003f80;
+            transform: scale(0.95);
+          }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Horario de Clases</h1>
+        
+        <div class="day">Lunes</div>
+        <div class="link-container">
+           
+        </div>
+
+        <div class="day">Martes</div>
+        <div class="link-container">
+            <a href="https://us02web.zoom.us/j/89036204634" target="_blank">Proyectos 8:15</a>
+        </div>
+
+        <div class="day">Miércoles</div>
+        <div class="link-container">
+            <a href="https://us02web.zoom.us/j/88427270996" target="_blank">Arquitectura de TI 6:15</a>
+            <a href="https://us02web.zoom.us/j/83159782834" target="_blank">Metodos Numericos 8:15</a>
+        </div>
+
+        <div class="day">Jueves</div>
+        <div class="link-container">
+		<a href="https://us02web.zoom.us/j/89319785141" target="_blank">Practica empresarial 6:15</a>
+            	<a href="https://us02web.zoom.us/j/82693069165" target="_blank">Gerencia y gestion de TI 8:15</a>            
+        </div>
+
+        <div class="day">Viernes</div>
+        <div class="link-container">
+            <a href="https://us02web.zoom.us/j/87929114205" target="_blank">Gestion de Procesos 8:15</a>
+        </div>
+        <div><h4 class="email">alexander.hurtado7170@gmail.com</h4></div>
+        <button class="btn" onclick="copiarTexto()">Copiar E-mail</button>
+    </div>
+    <script>
+        function copiarTexto() {
+          const texto = "alexander.hurtado7170@gmail.com";
+          navigator.clipboard.writeText(texto)
+            .then(() => alert("✅ Texto copiado al portapapeles"))
+            .catch(err => console.error("Error al copiar: ", err));
+        }
+      </script>
+    
+</body>
+</html>

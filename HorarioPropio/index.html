@@ -47,16 +47,38 @@
             flex-direction: column;
             gap: 10px;
             margin-top: 10px;
-        }
+        }     
+        .vacio{
+            text-decoration: none;
+            padding: 10px;
+            background-color: #cb1f1f;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: block;      
+        }  
         a {
+            display: flex;
+            flex-direction: row;
             text-decoration: none;
             padding: 10px;
             background-color: #333;
             color: white;
             border-radius: 5px;
             transition: background 0.3s;
-            display: block;
+            align-items: center;
+            justify-content: center;  
+                      
         }
+        .titulo {
+            margin-right: 10px; /* separa "Proyectos" de "8:15" */
+            font-weight: bold;
+          }
+          
+          .hora {
+            font-size: 1.2rem; /* puedes ajustar tamaño si quieres simular un h4 */
+            color: #e8c30e;
+          }
         a:hover {
             background-color: #555;
         }
@@ -90,29 +112,47 @@
         
         <div class="day">Lunes</div>
         <div class="link-container">
-           
+            <a class="vacio" target="_blank">NO HAY CLASES</a>
         </div>
 
         <div class="day">Martes</div>
-        <div class="link-container">
-            <a href="https://us02web.zoom.us/j/89036204634" target="_blank">Proyectos</a>
+        <div class="link-container">                       
+            <a href="https://us02web.zoom.us/j/89036204634" target="_blank">
+                <span class="titulo">Proyectos</span>
+                <span class="hora">8:15</span>
+              </a>                  
         </div>
 
         <div class="day">Miércoles</div>
         <div class="link-container">
-            <a href="https://us02web.zoom.us/j/88427270996" target="_blank">Arquitectura de TI</a>
-            <a href="https://us02web.zoom.us/j/83159782834" target="_blank">Metodos Numericos</a>
+            <a href="https://us02web.zoom.us/j/88427270996" target="_blank">
+                <span class="titulo">Arquitectura de TI</span>
+                <span class="hora">6:15</span>
+            </a>
+            <a href="https://us02web.zoom.us/j/83159782834" target="_blank">
+                <span class="titulo">Metodos Numericos</span>
+                <span class="hora">8:15</span>
+            </a>
         </div>
 
         <div class="day">Jueves</div>
         <div class="link-container">
-		<a href="https://us02web.zoom.us/j/89319785141" target="_blank">Practica empresarial</a>
-            	<a href="https://us02web.zoom.us/j/82693069165" target="_blank">Gerencia y gestion de TI</a>            
+		<a href="https://us02web.zoom.us/j/89319785141" target="_blank">
+                <span class="titulo">Practica empresarial</span>
+                <span class="hora">6:15</span>
+        </a>
+            	<a href="https://us02web.zoom.us/j/82693069165" target="_blank">
+                    <span class="titulo">Gerencia y gestion de TI</span>
+                    <span class="hora">8:15</span>
+                </a>            
         </div>
 
         <div class="day">Viernes</div>
         <div class="link-container">
-            <a href="https://us02web.zoom.us/j/87929114205" target="_blank">Gestion de Procesos</a>
+            <a href="https://us02web.zoom.us/j/87929114205" target="_blank">
+                    <span class="titulo">Gestion de Procesos</span>
+                    <span class="hora">8:15</span>
+            </a>
         </div>
         <div><h4 class="email">alexander.hurtado7170@gmail.com</h4></div>
         <button class="btn" onclick="copiarTexto()">Copiar E-mail</button>
