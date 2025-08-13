@@ -146,6 +146,8 @@
                     <span class="hora">6:15</span>
             </a>
         </div>
+        <input id="emailInput" type="text" placeholder="Introduce tú email">
+        <button onclick="guardarEmail()">Guardar Email</button>
         <div><h4 class="email">alexander.hurtado7170@gmail.com</h4></div>
         <button class="btn" onclick="copiarTexto()">Copiar E-mail</button>
     </div>
@@ -156,6 +158,11 @@
             .then(() => alert("✅ Texto copiado al portapapeles"))
             .catch(err => console.error("Error al copiar: ", err));
         }
+        function guardarEmail() {
+            const email = document.getElementById('emailInput').value;
+            localStorage.setItem('emailGuardado', email);
+            alert('Email guardado localmente.');
+    }
       </script>    
 </body>
 </html>
